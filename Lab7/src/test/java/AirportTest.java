@@ -39,7 +39,7 @@ public class AirportTest {
         List<MilitaryPlane> transportMilitaryPlanes = airport.getTransportMilitaryPlanes();
         boolean hasNonTransportPlane = false;
         for (MilitaryPlane militaryPlane : transportMilitaryPlanes) {
-            if ((militaryPlane.getType() == MilitaryType.TRANSPORT)) {
+            if ((militaryPlane.getType() != MilitaryType.TRANSPORT)) {
                 hasNonTransportPlane = true;
                 break;
             }
