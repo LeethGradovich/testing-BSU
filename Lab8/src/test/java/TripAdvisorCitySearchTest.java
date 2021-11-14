@@ -13,6 +13,7 @@ public class TripAdvisorCitySearchTest {
 
     @BeforeMethod(alwaysRun = true)
     public void setupDriver(){
+        System.setProperty("webdriver.chrome.driver", "/usr/lib/chromium-browser/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage");
         driver = new ChromeDriver(options);
@@ -38,5 +39,4 @@ public class TripAdvisorCitySearchTest {
     public void closeBrowser(){
         driver.quit();
     }
-
 }

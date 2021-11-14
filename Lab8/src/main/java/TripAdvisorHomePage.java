@@ -50,7 +50,4 @@ public class TripAdvisorHomePage {
     public String getCurrentUrl(){
         return driver.getCurrentUrl();
     }
-
-
-
 }
