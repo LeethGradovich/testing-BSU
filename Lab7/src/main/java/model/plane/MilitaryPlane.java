@@ -1,12 +1,10 @@
-package Planes;
+package model.plane;
 
-import models.MilitaryType;
-
-import java.util.Objects;
+import model.type.MilitaryType;
 
 public class MilitaryPlane extends Plane {
 
-    private MilitaryType type;
+    private final MilitaryType type;
 
     public MilitaryPlane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, MilitaryType type) {
         super(model, maxSpeed, maxFlightDistance, maxLoadCapacity);
@@ -35,6 +33,8 @@ public class MilitaryPlane extends Plane {
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), type);
+        int result = super.hashCode();
+        result = 31 * result + (type != null ? type.hashCode() : 0);
+        return result;
     }
 }

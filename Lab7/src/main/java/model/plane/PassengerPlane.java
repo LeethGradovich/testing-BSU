@@ -1,6 +1,4 @@
-package Planes;
-
-import java.util.Objects;
+package model.plane;
 
 public class PassengerPlane extends Plane {
 
@@ -22,7 +20,6 @@ public class PassengerPlane extends Plane {
                         '}');
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -34,6 +31,8 @@ public class PassengerPlane extends Plane {
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), passengersCapacity);
+        int result = super.hashCode();
+        result = 31 * result + passengersCapacity;
+        return result;
     }
 }
