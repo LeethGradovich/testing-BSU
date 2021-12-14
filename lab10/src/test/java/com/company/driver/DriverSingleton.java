@@ -21,7 +21,7 @@ public class DriverSingleton {
                 default: {
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions options = new ChromeOptions();
-                    options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage");
+                    //options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage");
                     driver = new ChromeDriver(options);
                 }
             }
